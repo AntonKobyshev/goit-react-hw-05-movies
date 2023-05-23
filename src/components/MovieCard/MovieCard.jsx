@@ -1,7 +1,16 @@
-import { Container, Img, Title, Wrapper, Year, Description, Text } from './MovieCard.styled';
+import {
+  Container,
+  Img,
+  Title,
+  Wrapper,
+  Year,
+  Description,
+  Text,
+} from './MovieCard.styled';
 
 export const MovieCard = ({ movie }) => {
-  const { poster_path, title, release_date, vote_average, overview, genres } = movie;
+  const { poster_path, title, release_date, vote_average, overview, genres } =
+    movie;
 
   const imgBaseUrl = 'https://image.tmdb.org/t/p/w500/';
   const imgUrl = imgBaseUrl.concat(poster_path);

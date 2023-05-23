@@ -44,7 +44,7 @@ export const NavItemLink = styled(NavLink)`
   :focus-visible:not(.active) {
     color: var(--accent);
   }
-  
+
   :focus {
     outline: none;
     box-shadow: transperent;

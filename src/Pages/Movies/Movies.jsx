@@ -24,16 +24,20 @@ const Movies = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-  if (query.trim() === '') {
+    if (query.trim() === '') {
       Notify.failure('Enter a query name.');
       return;
     }
-  setSearchParams(query !== '' ? { query } : {});
-  }
+    setSearchParams(query !== '' ? { query } : {});
+  };
 
   return (
     <>
-      <SearchBox onSubmit={handleSubmit} onChange={handleChange} prevQuery={query} />
+      <SearchBox
+        onSubmit={handleSubmit}
+        onChange={handleChange}
+        prevQuery={query}
+      />
       <MoviesList movies={movies} />
     </>
   );

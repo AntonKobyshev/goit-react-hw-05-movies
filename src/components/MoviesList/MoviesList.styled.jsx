@@ -34,7 +34,6 @@ export const MovieLink = styled(Link)`
   &:hover img {
     filter: grayscale(0);
   }
-
 `;
 
 export const MovieImg = styled.img`

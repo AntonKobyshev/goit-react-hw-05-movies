@@ -18,7 +18,12 @@ export const MoviesList = ({ movies }) => {
       {movies.map(({ id, title, poster_path }) => (
         <MovieItem key={id}>
           <MovieLink to={`/movies/${id}`} state={{ from: location }}>
-            <MovieImg src={ poster_path ? imgBaseUrl.concat(poster_path) : defaultMovieImg} alt={title} />
+            <MovieImg
+              src={
+                poster_path ? imgBaseUrl.concat(poster_path) : defaultMovieImg
+              }
+              alt={title}
+            />
             <MovieName>{title}</MovieName>
           </MovieLink>
         </MovieItem>
@@ -33,6 +38,6 @@ MoviesList.propTypes = {
       id: PropTypes.number.isRequired,
       title: PropTypes.string,
       poster_path: PropTypes.string,
-   })
+    })
   ).isRequired,
 };
