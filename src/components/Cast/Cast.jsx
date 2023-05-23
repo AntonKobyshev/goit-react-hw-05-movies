@@ -24,7 +24,7 @@ const Cast = () => {
 
       {cast.map(({ id, profile_path, name, character }) => (
         <Item key={id}>
-          <Img src={profile_path ? imgBaseUrl.concat(profile_path) : defaultCastImg} alt="" />
+          <Img src={profile_path ? imgBaseUrl.concat(profile_path) : defaultCastImg} alt={name} />
           <div>
             <Name>{name}</Name>
             <Character>{character}</Character>
