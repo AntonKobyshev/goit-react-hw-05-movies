@@ -17,6 +17,11 @@ export const MovieItem = styled.li`
   overflow: hidden;
   background-color: var(--bg);
   box-shadow: var(--main-shadow);
+  transition: transform 0.3s ease;
+  &:hover {
+    color: var(--accent);
+    transform: scale(1.05);
+  }
 `;
 
 export const MovieLink = styled(Link)`
@@ -30,9 +35,6 @@ export const MovieLink = styled(Link)`
     filter: grayscale(0);
   }
 
-  &:hover p {
-    color: var(--accent);
-  }
 `;
 
 export const MovieImg = styled.img`
