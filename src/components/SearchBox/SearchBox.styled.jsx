@@ -45,6 +45,6 @@ export const Button = styled.button`
   }
 
   :focus {
-    box-shadow: 0px 0px 0px 6px var(--accent);
+    box-shadow: taransperent;
   }
 `;
