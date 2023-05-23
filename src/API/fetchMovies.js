@@ -8,27 +8,27 @@ const searchParams = new URLSearchParams({
 
 axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 
-export const fetchTrendingMovies = async () => {
+export const getTrendingMovies = async () => {
   const { data } = await axios.get(`/trending/all/week?${searchParams}`);
   return data.results;
 };
 
-export const fetchMovieDetails = async id => {
-  const { data } = await axios.get(`/movie/${id}?${searchParams}`);
-  return data;
-};
-
-export const fetchMovieByName = async name => {
+export const getMovieByName = async name => {
   const { data } = await axios.get(`/search/movie?${searchParams}&query=${name}`);
   return data.results;
 };
 
-export const fetchMovieCast = async id => {
+export const getMovieDetails = async id => {
+  const { data } = await axios.get(`/movie/${id}?${searchParams}`);
+  return data;
+};
+
+export const getMovieCast = async id => {
   const { data } = await axios.get(`/movie/${id}/credits?${searchParams}`);
   return data.cast;
 };
 
-export const fetchMovieReviews = async id => {
+export const getMovieReviews = async id => {
   const { data } = await axios.get(`/movie/${id}/reviews?${searchParams}`);
   return data.results;
 };
