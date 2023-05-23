@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { getMovieCast } from 'API/fetchMovies';
 import { NoCast } from 'Errors/NoCast';
 import { List, Item, Img, Name, Character } from './Cast.styled';
+import defaultCastImg from 'images/cast-poster-default.png';
 
 const Cast = () => {
   const [cast, setCast] = useState(null);
@@ -23,7 +24,7 @@ const Cast = () => {
 
       {cast.map(({ id, profile_path, name, character }) => (
         <Item key={id}>
-          <Img src={imgBaseUrl.concat(profile_path)} alt="" />
+          <Img src={profile_path ? imgBaseUrl.concat(profile_path) : defaultCastImg} alt="" />
           <div>
             <Name>{name}</Name>
             <Character>{character}</Character>
