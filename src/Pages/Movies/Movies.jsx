@@ -5,7 +5,7 @@ import { getMovieByName } from 'API/fetchMovies';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-const Movies = ({ _, prevQuery }) => {
+const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
