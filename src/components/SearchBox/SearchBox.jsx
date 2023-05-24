@@ -1,11 +1,11 @@
 import { Form, Input, Button } from './SearchBox.styled';
 import PropTypes from 'prop-types';
 
-export const SearchBox = ({ onChange, onSubmit }) => {
+export const SearchBox = ({ onChange, onSubmit, defaultValue }) => {
+  
   return (
     <Form onSubmit={onSubmit}>
-      <Input type="text" onChange={onChange} />
-
+      <Input defaultValue={defaultValue} type="text" onChange={onChange} />
       <Button type="submit">Search</Button>
     </Form>
   );

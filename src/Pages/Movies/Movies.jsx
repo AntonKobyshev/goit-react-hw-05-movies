@@ -34,9 +34,9 @@ const Movies = () => {
   return (
     <>
       <SearchBox
+        defaultValue={searchParams.get('query')}
         onSubmit={handleSubmit}
         onChange={handleChange}
-        prevQuery={query}
       />
       <MoviesList movies={movies} />
     </>

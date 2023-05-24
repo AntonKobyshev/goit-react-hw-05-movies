@@ -7,6 +7,7 @@ import {
   Description,
   Text,
 } from './MovieCard.styled';
+import defaultMovieImg from 'images/movie-poster-default.webp';
 
 export const MovieCard = ({ movie }) => {
   const { poster_path, title, release_date, vote_average, overview, genres } =
@@ -20,7 +21,7 @@ export const MovieCard = ({ movie }) => {
 
   return (
     <Container>
-      <Img src={imgUrl} alt="{title}" width="350" />
+      <Img src={imgUrl ?? defaultMovieImg} alt="{title}" width="350" />
       <Wrapper>
         <Title>
           {title} <Year>({releaseDate})</Year>
